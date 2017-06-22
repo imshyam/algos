@@ -2,7 +2,7 @@ package algos.test;
 
 import algos.dp.RodCutting;
 
-class Test{
+class RoadCuttingTest{
 	public static void main(String args[]){
 		RodCutting r = new RodCutting();
 		int n; int[] p;
