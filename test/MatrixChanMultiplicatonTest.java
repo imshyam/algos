@@ -8,5 +8,6 @@ class MatrixChainMultiplicationTest{
 		int[] p = new int[]{30, 35, 15, 5, 10, 20, 25};
 		mm.solve(p);
 		System.out.println(mm.cost);
+		System.out.println(mm.s[0][p.length - 2]);
 	}
 }
