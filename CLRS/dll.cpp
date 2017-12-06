@@ -1,23 +1,24 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
 
 struct node {
 	int val;
 	node* next;
 	node* prev;
-}
+};
+node* head = NULL;
 
-void insert_node(node* head, int n) {
-	node new_node = new node();
+void insert_node(int n) {
+	node* new_node = new node();
 	new_node->val = n;
-	new_node->next = null;
-	new_node->prev = null;
-	if(head == null){
+	new_node->next = NULL;
+	new_node->prev = NULL;
+	if(head == NULL){
 		head = new_node;
 	}
 	else{
 		node* current = head;
-		while(current->next != null){
+		while(current->next != NULL){
 			current = current->next;
 		}
 		current->next = new_node;
@@ -25,22 +26,19 @@ void insert_node(node* head, int n) {
 	}
 }
 
-void print_dll(node* head) {
+void print_dll() {
 	node* current = head;
-	while(current != null){
+	while(current != NULL){
 		cout << current->val << " -> ";
 		current = current->next;
 	}
+	cout << "NULL \n";
 }
 
 int main() {
-	node head = new node();
-	head->val = null;
-	head->next = null;
-	head->prev = null;
-	insert_node(head, 1);
-	insert_node(head, 2);
-	insert_node(head, 3);
-	insert_node(head, 4);
-	print_dll(head);
+	insert_node(1);
+	insert_node(2);
+	insert_node(3);
+	insert_node(4);
+	print_dll();
 }
